@@ -1,0 +1,23 @@
+if productos.length === 0
+
+  p.m-0 No hay productos.
+
+else 
+
+  table.table 
+    thead 
+      tr  
+        th.col Id
+        th.col Nombre
+        th.col Precio
+        th.col Foto
+    tbody
+
+      each producto in productos 
+
+        tr  
+          th(scope="row") #{producto.id}
+          td #{producto.title}
+          td #{producto.price}
+          td(style="width: 100px;")
+            img(src=producto.thumbnail).w-100

@@ -1,0 +1,11 @@
+form(action="/productos" method="POST")
+  div.mb-3
+    label(for="title").form-label Nombre
+    input(type="text" name="title").form-control
+  div.mb-3
+    label(for="price").form-label Precio
+    input(type="text" name="price").form-control
+  div.mb-3
+    label(for="thumbnail").form-label Foto URL
+    input(type="text" name="thumbnail").form-control
+  button(type="submit").btn.btn-primary Enviar

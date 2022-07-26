@@ -1,0 +1,32 @@
+{{#if productos }}
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {{#each productos as |producto| }}
+
+        <tr>
+          <th scope="row">{{ producto.id }}</th>
+          <td>{{ producto.title }}</td>
+          <td>{{ producto.price }}</td>
+          <td style="width: 100px;"><img class="w-100" src="{{ producto.thumbnail }}"></td>
+        </tr>
+
+      {{/each }}
+
+    </tbody>
+  </table>
+
+{{ else }}
+
+  <p class="m-0">No hay productos.</p>
+
+{{/if }}
